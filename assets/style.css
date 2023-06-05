@@ -7,7 +7,7 @@
     font-family: 'Roboto', sans-serif;
 }
 
-body {
+.home-section {
     background-image: url("background.jpg");
     background-size: cover;
     height: 100vh;
@@ -140,10 +140,10 @@ body {
 }
 
 .btn-modal {
-    padding: 16px;
     background-color: white;
     border: 1px solid #1773cf;
     color: #1773cf;
+    padding: 16px;
     border-radius: 10px;
     text-transform: uppercase;
 }
@@ -196,11 +196,9 @@ body {
 #textobusca {
     border: #6d747a;
     margin-left: 20px;
-
     width: 100%;
     height: 100%;
     font-size: 16px;
-
 }
 
 #textobusca:focus {
@@ -215,15 +213,12 @@ body {
     padding-right: 15px;
 }
 
-
 .card-esquerda {
     width: 450px;
     min-height: 40%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-
 }
 
 .card-esquerda h1 {
@@ -262,7 +257,6 @@ body {
 }
 
 .feedback {
-
     position: fixed;
     right: 0px;
     bottom: 130px;
@@ -278,19 +272,95 @@ body {
     position: fixed;
     bottom: 10px;
     right: 30px;
+}
 
+.form-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1773cf;
+}
 
+.container-form {
+    width: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+    padding: 16px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+.container-form h2 {
+    color: #053361;
+}
+
+.container-form label {
+    text-align: left;
+    padding-top: 5px;
+}
+
+.botoes {
+    display: flex;
+}
+
+.botoes button {
+    padding: 10px;
+    margin: 0;
+    text-transform: uppercase;
+}
+
+#botao-1 {
+    border-radius: 10px 0 0 10px;
+    border: none;
+    color: #fff;
+    background-color: #1773cf;
+}
+
+#botao-2 {
+    border-radius: 0 10px 10px 0;
+    color: #1773cf;
+    border: 3px solid #1773cf;
+    background-color: #fff;
+}
+
+.formulario {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input-form {
+    padding: 10px;
+}
+
+#form-botao {
+    padding: 10px;
+    border: 0;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+.invalido {
+    width: 100%;
+    display: none;
+    text-align: left;
+    color: red;
 }
 
 @media (max-width: 1150px) {
     .fundo {
         display: flex;
         justify-content: center;
-
+        align-items: center;
     }
 
     .card-esquerda {
-
         align-items: center;
     }
 

@@ -10,64 +10,92 @@
 </head>
 
 <body>
-    <header class="cabecalho">
-        <div class="container-esquerdo">
-            <img src="assets/logo.png" alt="Logo CarMax" class="logo" />
-            <nav class="menu">
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">Sell/Trade</a></li>
-                <li><a href="#">Finance</a></li>
-                <li>
-                    <a href="#">More <i class="fa-solid fa-caret-down menu-icone-seta"></i></a>
-                    <ul class="submenu">
-                        <li><a href="#">Service & Repairs</a></li>
-                        <li><a href="#">FAQ & Support</a></li>
-                        <li><a href="#">Why CarMax</a></li>
-                        <li><a href="#">Buying Online</a></li>
-                        <li><a href="#">Car Research & Advice</a></li>
-                        <li><a href="#">Warranties & MaxCare</a></li>
-                        <li><a href="#">Search Job at CarMax</a></li>
-                    </ul>
-                </li>
-            </nav>
-        </div>
-        <div class="container-direito">
-            <div class="localizacao">
-                <i class="fa-solid fa-location-dot icone-localizacao"></i>
-                <div class="localizacao-textos">
-                    <p>Your Store for 66204</p>
-                    <a href="#">Kansas City <i class="fa-solid fa-caret-down icone-seta"></i></a>
+    <section class="home-section">
+        <header class="cabecalho">
+            <div class="container-esquerdo">
+                <img src="assets/logo.png" alt="Logo CarMax" class="logo" />
+                <nav class="menu">
+                    <li><a href="#">Shop</a></li>
+                    <li><a href="#">Sell/Trade</a></li>
+                    <li><a href="#">Finance</a></li>
+                    <li>
+                        <a href="#">More <i class="fa-solid fa-caret-down menu-icone-seta"></i></a>
+                        <ul class="submenu">
+                            <li><a href="#">Service & Repairs</a></li>
+                            <li><a href="#">FAQ & Support</a></li>
+                            <li><a href="#">Why CarMax</a></li>
+                            <li><a href="#">Buying Online</a></li>
+                            <li><a href="#">Car Research & Advice</a></li>
+                            <li><a href="#">Warranties & MaxCare</a></li>
+                            <li><a href="#">Search Job at CarMax</a></li>
+                        </ul>
+                    </li>
+                </nav>
+            </div>
+            <div class="container-direito">
+                <div class="localizacao">
+                    <i class="fa-solid fa-location-dot icone-localizacao"></i>
+                    <div class="localizacao-textos">
+                        <p>Your Store for 66204</p>
+                        <a href="#">Kansas City <i class="fa-solid fa-caret-down icone-seta"></i></a>
+                    </div>
                 </div>
+                <div id="modal">
+                    <span>Your store for 66204:</span>
+                    <h3>Kansas City</h3>
+                    <a href="#">View more store details</a>
+                    <p>6801 East Frontage Road
+                        Merriam, KS 66204</p>
+                    <button class="btn-modal">see cars at this store</button>
+                </div>
+                <i class="fa-solid fa-heart icone-coracao"></i>
+                <i class="fa-solid fa-user icone-usuario"></i>
             </div>
-            <div id="modal">
-                <span>Your store for 66204:</span>
-                <h3>Kansas City</h3>
-                <a href="#">View more store details</a>
-                <p>6801 East Frontage Road
-                    Merriam, KS 66204</p>
-                <button class="btn-modal">see cars at this store</button>
-            </div>
-            <i class="fa-solid fa-heart icone-coracao"></i>
-            <i class="fa-solid fa-user icone-usuario"></i>
+        </header>
+        <div class="pesquisa">
+            <input type="text" id="textobusca" placeholder="Search by make, model, or keyword">
+            <i class="fa-solid fa-magnifying-glass"></i>
         </div>
-    </header>
-    <div class="pesquisa">
-        <input type="text" id="textobusca" placeholder="Search by make, model, or keyword">
-        <i class="fa-solid fa-magnifying-glass"></i>
-    </div>
-    <main class="fundo">
-        <div class="card-esquerda">
-            <div class="chamada">
-                <h1>Love Your Car Guarantee<span>&reg;</span> </h1>
+        <main class="fundo">
+            <div class="card-esquerda">
+                <div class="chamada">
+                    <h1>Love Your Car Guarantee<span>&reg;</span> </h1>
 
+                </div>
+
+                <h4>Take 30 to Love It or Return It (up to 1500mi) <i class="fa-solid fa-circle-info"></i></h4>
+                <button>SEARCH CARS</button>
             </div>
-
-            <h4>Take 30 to Love It or Return It (up to 1500mi) <i class="fa-solid fa-circle-info"></i></h4>
-            <button>SEARCH CARS</button>
+            <img class="feedback"
+                src="https://sjc1.qualtrics.com/WRQualtricsSiteIntercept/Graphic.php?IM=IM_20qzf8m77sY0mLX" />
+            <i class="fa-solid fa-message"></i>
+    </section>
+    <section class="form-section">
+        <div class="container-form">
+            <h2>Get REl offer in minutes</h2>
+            <p>Most cars qualify, some we'll ask to see in person.</p>
+            <div class="botoes">
+                <button id="botao-1">License plate</button>
+                <button id="botao-2">VIN</button>
+            </div>
+            <form class="formulario" id="formulario">
+                <label for="placa">License plate number</label>
+                <input class="input-form" type="text" name="placa" id="placa">
+                <span class="invalido" id="invalido-placa">*Campo inválido!</span>
+                <label for="cidade">Where's your car registered?</label>
+                <select class="input-form" name="cidade" id="cidade">
+                    <option value="" data-default disabled selected></option>
+                    <option value="fza">Fortaleza</option>
+                    <option value="sp">São Paulo</option>
+                </select>
+                <span class="invalido" id="invalido-cidade">*Campo inválido!</span>
+                <label for="cep">What's your zip code?</label>
+                <input class="input-form" type="number" name="cep" id="cep">
+                <span class="invalido" id="invalido-cep">*Campo inválido!</span>
+                <button type="submit" id="form-botao">Get my offer!</button>
+            </form>
         </div>
-        <img class="feedback"
-            src="https://sjc1.qualtrics.com/WRQualtricsSiteIntercept/Graphic.php?IM=IM_20qzf8m77sY0mLX" />
-        <i class="fa-solid fa-message"></i>
+    </section>
     </main>
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/79391a2d6d.js" crossorigin="anonymous"></script>
