@@ -305,27 +305,38 @@
 }
 
 .botoes {
+    width: 100%;
+    height: 36px;
     display: flex;
+    justify-content: center;
 }
 
 .botoes button {
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
     padding: 10px;
     margin: 0;
     text-transform: uppercase;
+    border: 2px solid #1773cf;
+    color: #1773cf;
+    background-color: #fff;
 }
 
-#botao-1 {
-    border-radius: 10px 0 0 10px;
-    border: none;
+.botoes button .selected {
+    cursor: default;
     color: #fff;
     background-color: #1773cf;
 }
 
+#botao-1 {
+    border-radius: 10px 0 0 10px;
+}
+
 #botao-2 {
     border-radius: 0 10px 10px 0;
-    color: #1773cf;
-    border: 3px solid #1773cf;
-    background-color: #fff;
 }
 
 .formulario {
