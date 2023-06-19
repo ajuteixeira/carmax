@@ -79,10 +79,27 @@ placa.addEventListener('change', validarPlacaInput)
 cidade.addEventListener('change', validarCidadeInput)
 cep.addEventListener('change', validarCepInput)
 
-// formulario.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     validarPlacaInput();
-//     validarCidadeInput();
-//     validarCepInput();
-//     validaBotaoSubmit();
-// })
+// mudança dos campos do formulário
+
+const btn_placa = document.getElementById('btn-placa');
+const btn_vin = document.getElementById('btn-vin');
+const campo_placa = document.getElementById('campo-placa');
+const campo_vin = document.getElementById('campo-vin');
+
+btn_vin.addEventListener('click', (e) => {
+    e.preventDefault()
+    // btn_placa.setAttribute('class', 'btn')
+    btn_placa.classList.remove('selected')
+    btn_vin.classList.add('selected')
+    campo_vin.classList.remove('hidden')
+    campo_placa.classList.add('hidden')
+})
+
+btn_placa.addEventListener('click', (e) => {
+    e.preventDefault()
+    btn_vin.classList.remove('selected')
+    btn_placa.classList.add('selected')
+    campo_vin.classList.add('hidden')
+    campo_placa.classList.remove('hidden')
+})
+

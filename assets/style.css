@@ -299,7 +299,7 @@
     color: #053361;
 }
 
-.container-form label {
+.container-form-label {
     text-align: left;
     padding-top: 5px;
 }
@@ -311,7 +311,8 @@
     justify-content: center;
 }
 
-.botoes button {
+.btn {
+    cursor: pointer;
     width: auto;
     display: flex;
     align-items: center;
@@ -325,17 +326,17 @@
     background-color: #fff;
 }
 
-.botoes button .selected {
-    cursor: default;
+.selected {
+    cursor: pointer;
     color: #fff;
     background-color: #1773cf;
 }
 
-#botao-1 {
+#btn-placa {
     border-radius: 10px 0 0 10px;
 }
 
-#botao-2 {
+#btn-vin {
     border-radius: 0 10px 10px 0;
 }
 
@@ -348,6 +349,8 @@
 
 .input-form {
     padding: 10px;
+    width: 100%;
+    margin-bottom: 15px;
 }
 
 #form-botao {
@@ -362,6 +365,10 @@
     display: none;
     text-align: left;
     color: red;
+}
+
+.hidden {
+    display: none;
 }
 
 @media (max-width: 1150px) {

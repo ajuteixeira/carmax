@@ -75,21 +75,27 @@
             <h2>Get REl offer in minutes</h2>
             <p>Most cars qualify, some we'll ask to see in person.</p>
             <div class="botoes">
-                <button class="selected" id="botao-1">License plate</button>
-                <button id="botao-2">VIN</button>
+                <button type="button" class="btn selected" id="btn-placa">License plate</button>
+                <button type="button" class="btn" id="btn-vin">VIN</button>
             </div>
             <form class="formulario" id="formulario">
-                <label for="placa">License plate number</label>
-                <input class="input-form" type="text" name="placa" id="placa">
-                <span class="invalido" id="invalido-placa">*Campo inválido!</span>
-                <label for="cidade">Where's your car registered?</label>
-                <select class="input-form" name="cidade" id="cidade">
-                    <option value="" data-default disabled selected></option>
-                    <option value="fza">Fortaleza</option>
-                    <option value="sp">São Paulo</option>
-                </select>
-                <span class="invalido" id="invalido-cidade">*Campo inválido!</span>
-                <label for="cep">What's your zip code?</label>
+                <div class="campo-vin hidden" id="campo-vin">
+                    <label class="container-form-label" for="vin">VIN</label>
+                    <input class="input-form" type="number" name="vin" id="vin">
+                </div>
+                <div class="campo-placa" id="campo-placa">
+                    <label class="container-form-label" for="placa">License plate number</label>
+                    <input class="input-form" type="text" name="placa" id="placa">
+                    <span class="invalido" id="invalido-placa">*Campo inválido!</span>
+                    <label class="container-form-label" for="cidade">Where's your car registered?</label>
+                    <select class="input-form" name="cidade" id="cidade">
+                        <option value="" data-default disabled selected></option>
+                        <option value="fza">Fortaleza</option>
+                        <option value="sp">São Paulo</option>
+                        <span class="invalido" id="invalido-cidade">*Campo inválido!</span>
+                    </select>
+                </div>
+                <label class="container-form-label" for="cep">What's your zip code?</label>
                 <input class="input-form" type="number" name="cep" id="cep">
                 <span class="invalido" id="invalido-cep">*Campo inválido!</span>
                 <button type="submit" disabled id="form-botao">Get my offer!</button>
